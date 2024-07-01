@@ -1,0 +1,212 @@
+/* Styles for HomePage */
+.homepage-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.background-image {
+  position: fixed; /* Make background image fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("book.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5); /* Optional: Adjust background image brightness */
+  z-index: -1; /* Ensure it stays behind other content */
+}
+
+.content {
+  text-align: center;
+  z-index: 1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent grey background */
+  padding: 20px;
+  border-radius: 25px;
+  width: 50%;
+  margin: 20px auto; /* Add margin for spacing */
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.5rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Opaque white background for inputs */
+  color: black; /* Change font color to black */
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.btn-outline-danger {
+  background-color: transparent;
+  border-color: #dc3545;
+  color: #dc3545;
+  transition: background-color 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.book-list {
+  display: grid; /* Changed to grid layout */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Responsive grid layout */
+  gap: 1rem; /* Gap between grid items */
+  justify-content: flex-start;
+}
+
+.card {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Adjusted card background color and transparency */
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+.close-icon {
+  width: 20px; /* Adjust the width as per your requirement */
+  height: 20px; /* Adjust the height as per your requirement */
+  margin-left: 95%;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Example: Add hover effect */
+}
+
+.card-body {
+  padding: 1rem;
+  color: black; /* Adjust text color */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.no-results {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: white; /* Adjust text color */
+}
+
+.option-btn {
+  bottom: 20px; /* Adjust bottom spacing as needed */
+  left: 20px; /* Adjust left spacing as needed */
+}
+
+.option-btn2 {
+  bottom: 20px; /* Adjust bottom spacing as needed */
+  margin-top: 2px;
+  left: 20px;
+}
+
+.search-bar {
+  position: relative;
+  width: 80%;
+  color: rgba(255, 255, 255, 0.7); /* Adjust text color for placeholder */
+  background: rgba(255, 255, 255, 0.2); /* Adjust background color */
+  border-radius: 5px; /* Add border radius for a rounded look */
+  display: flex; /* Ensure flex display for icon positioning */
+  align-items: center; /* Center items vertically */
+}
+
+.search-bar .form-control::placeholder {
+  color: white; /* Adjust placeholder text color */
+}
+
+.search-bar .form-control {
+  flex: 1; /* Take remaining space */
+  border: none; /* Remove border */
+  background: transparent; /* Transparent background */
+  padding: 12px; /* Adjust padding for input */
+  font-size: 16px; /* Adjust font size */
+  color: white; /* Adjust text color */
+}
+
+.search-bar .search-icon {
+  margin-right: 10px; /* Adjust margin for icon positioning */
+  width: 20px; /* Adjust icon size */
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Adjust the Sort By dropdown style */
+.form-control#sortBy {
+  appearance: none; /* Remove default arrow in select */
+  padding: 0.75rem 2rem 0.75rem 0.75rem; /* Adjust padding */
+  background: url("arrow-down.svg") no-repeat right 0.75rem center; /* Custom arrow icon */
+  background-size: 1.2rem; /* Size of the arrow icon */
+  -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+  -moz-appearance: none; /* Remove default arrow in Firefox */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .option-btn2 {
+    left: 20px; /* Adjust position on smaller screens */
+  }
+}
